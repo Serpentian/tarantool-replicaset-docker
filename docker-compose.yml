@@ -1,0 +1,14 @@
+services:
+  tarantool_instance_1:
+    image: tarantool-replication
+    command: /usr/local/bin/tarantool /instance.lua master
+    network_mode: host
+    volumes:
+        - ./tarantool_instance_1:/tarantool
+
+  tarantool_instance_2:
+    image: tarantool-replication
+    command: /usr/local/bin/tarantool /instance.lua
+    network_mode: host
+    volumes:
+        - ./tarantool_instance_2:/tarantool
