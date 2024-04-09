@@ -12,7 +12,7 @@ local replication = {
 
 local cfg = {
     replicaset_uuid = '069c421d-5776-449a-bb4d-f102f307c8c7',
-    -- work_dir        = '/tarantool',
+    work_dir        = '/tarantool',
     listen          = is_master and 3301 or 3302,
     read_only       = not is_master,
     replication     = replication,
